@@ -11,9 +11,8 @@ const App = () => {
        />
      </View>
 
-     <View style={styles.contenedor}>
+     <ScrollView style={styles.contenedor}>
       <Text style={{marginBottom:10, fontWeight:'bold'}}>Que hacer en Paris</Text>
-
       <ScrollView horizontal>
         <Image
           style={styles.actividad}
@@ -37,7 +36,20 @@ const App = () => {
         />
       </ScrollView>
 
-     </View>
+      <Text style={{marginVertical:10, fontWeight:'bold'}}>Los mejores alojamientos</Text>
+      <Image
+          style={styles.mejores}
+          source={ require('./assets/img/mejores1.jpg') }
+      />
+      <Image
+          style={styles.mejores}
+          source={ require('./assets/img/mejores2.jpg') }
+      />
+      <Image
+          style={styles.mejores}
+          source={ require('./assets/img/mejores3.jpg') }
+      />
+     </ScrollView>
     </>
   );
 };
@@ -54,6 +66,11 @@ const styles = StyleSheet.create({
     height: 300,
     width: 250,
     marginRight: 5
+  },
+  mejores: {
+    width: '100%',
+    height: 150,
+    marginBottom: 5
   }
 });
 
